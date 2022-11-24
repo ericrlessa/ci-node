@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+        <title>Calculator</title>
+    </head>
+
+    <body>
+            <h1>Calculator!</h1> 
+            <label for="op">Operation:</label>
+            <select onchange="controlInputs()" name="op" id="op">
+                <option value="sum">Sum</option>
+                <option value="sub">Sub</option>
+                <option value="times">Times</option>
+                <option value="squared">Squared</option>
+            </select>
+
+            <br><br>
+
+            <input id="a" type="text" name="a=" placeholder="a=">
+            <input id="b" type="text" name="b=" placeholder="b=">
+            =
+            <span id="result"></span><br>
+            <br>
+            <input type="submit" onclick="calc()" value="Calc">
+
+            <br>
+
+            
+
+        <script>
+            function calc(){
+                 a = document.getElementById("a").value
+                 b = document.getElementById("b").value
+
+                 op = document.getElementById("op").value
+
+                let request = new XMLHttpRequest();
+                request.open("GET", 'http://localhost:3000/' + op + '?a=' + a + '&b=' + b)
+                request.send();
+                request.onload = () => {
+                    if(request.status === 200){
+                        document.getElementById("result").textContent = request.response;
+                    }
+                }                 
+            }
+
+            function controlInputs(){
+                op = document.getElementById("op").value
+                if(op === 'squared'){
+                    document.getElementById("b").style.display = "none"
+                }else{
+                    document.getElementById("b").style.display = ""
+                }
+            }
+        </script>
+
+    </body>
+
+</html>
