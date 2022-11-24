@@ -1,6 +1,7 @@
 const express = require('express')
 const calc = require('./calc')
 const app = express()
+app.disable("x-powered-by");
 const port = 3000
 
 app.get('/', (req,res) => {
