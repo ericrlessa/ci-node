@@ -1,7 +1,7 @@
 //During the test the env variable is set to test
 process.env.NODE_ENV = 'test';
 
-let server = require('./index.js');
+let server = require('./server.js');
 
 let mongoose = require("mongoose");
 
