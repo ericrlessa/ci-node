@@ -21,3 +21,7 @@ Example: localhost:8080/
 ```bash
 docker run -d --rm -p8080:3000 ericlessa/ci-node-integration-test-sonar-docker
 ```
+
+## Sonar cloud
+
+https://sonarcloud.io/project/pull_requests_list?id=ericrlessa_ci-node
