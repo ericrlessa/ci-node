@@ -31,7 +31,7 @@ app.get('/squared', (req,res) => {
     res.json({message: 'Squared Calculator Rocks!', result: calc.squared(a)})
 })
 
-var server = app.listen(port, ()=> {
+const server = app.listen(port, ()=> {
 })
 
 
