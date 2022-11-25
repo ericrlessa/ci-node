@@ -32,8 +32,8 @@ app.get('/squared', (req,res) => {
 })
 
 const server = app.listen(port, ()=> {
+    console.log("Calculator running...")
 })
-
 
 module.exports = server
 
