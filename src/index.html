@@ -26,8 +26,6 @@
 
             <br>
 
-            
-
         <script>
             function calc(){
                  a = document.getElementById("a").value
@@ -35,7 +33,7 @@
 
                  op = document.getElementById("op").value
 
-                 fetch('http://localhost:3000/' + op + '?a=' + a + '&b=' + b)
+                 fetch('http://' + location.host + '/' + op + '?a=' + a + '&b=' + b)
                 .then((response) => response.json())
                 .then((data) => document.getElementById("result").textContent = data.result);
             }
