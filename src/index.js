@@ -9,25 +9,25 @@ app.get('/', (req,res) => {
 })
 
 app.get('/sum', (req,res) => {
-    var a = Number(req.query.a) 
-    var b = Number(req.query.b) 
+    const a = Number(req.query.a) 
+    const b = Number(req.query.b) 
     res.json({message: 'Sum Calculator Rocks!', result: calc.sum(a, b)})
 })
 
 app.get('/sub', (req,res) => {
-    var a = Number(req.query.a) 
-    var b = Number(req.query.b) 
+    const a = Number(req.query.a) 
+    const b = Number(req.query.b) 
     res.json({message: 'Sub Calculator Rocks!', result: calc.sub(a, b)})
 })
 
 app.get('/times', (req,res) => {
-    var a = Number(req.query.a) 
-    var b = Number(req.query.b) 
+    const a = Number(req.query.a) 
+    const b = Number(req.query.b) 
     res.json({message: 'Times Calculator Rocks!', result: calc.times(a, b)})
 })
 
 app.get('/squared', (req,res) => {
-    var a = Number(req.query.a) 
+    const a = Number(req.query.a) 
     res.json({message: 'Squared Calculator Rocks!', result: calc.squared(a)})
 })
 
