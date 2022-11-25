@@ -34,14 +34,9 @@
 
                  op = document.getElementById("op").value
 
-                let request = new XMLHttpRequest();
-                request.open("GET", 'http://localhost:3000/' + op + '?a=' + a + '&b=' + b)
-                request.send();
-                request.onload = () => {
-                    if(request.status === 200){
-                        document.getElementById("result").textContent = request.response;
-                    }
-                }                 
+                 fetch('http://localhost:3000/' + op + '?a=' + a + '&b=' + b)
+                .then((response) => response.json())
+                .then((data) => document.getElementById("result").textContent = data.result);
             }
 
             function controlInputs(){
