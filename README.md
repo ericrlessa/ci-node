@@ -14,3 +14,10 @@ Informe o link da PR abaixo para que possamos corrigir.
 
 ## Docker image
 
+map 3000 container port to access the server.
+
+Example: localhost:8080/
+
+```bash
+docker run -d --rm -p8080:3000 ericlessa/ci-node-integration-test-sonar-docker
+```
